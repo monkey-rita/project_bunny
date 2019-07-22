@@ -6,7 +6,7 @@ import 'package:project_bunny/entry.template.dart' as ng;
 
 void main() {
   final testBed =
-      NgTestBed.forComponent<AppEntry>(ng.AppEntryFactory);
+      NgTestBed.forComponent<AppEntry>(ng.AppEntryNgFactory);
   NgTestFixture<AppEntry> fixture;
 
   setUp(() async {
