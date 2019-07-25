@@ -1,26 +1,25 @@
-import 'dart:io';
 import 'package:angular/angular.dart';
 import 'package:markdown/markdown.dart';
 
 @Component(
   selector: 'tech-article',
   template: '''
-  <div [innerHTML]="fromMarkdown">Loading...</div>
+  <h1>I am  a test</h1>
+  <p><code>final code = 123;</code></p>
+  <div class="article-contents" [innerHTML]="fromMarkdown">Loading...</div>
   ''',
-  styleUrls: ['github.css']
+  styleUrls: ['github.css', 'article.css']
 )
-class Article implements OnInit{
+class ArticleComponent implements OnInit{
 
   String fromMarkdown = "";
 
-  @Input("filePath")
-  String filePath;
+  @Input("mdAsString")
+  String mdAsString;
 
   @override
   void ngOnInit() {
-    File(filePath).readAsString().then((fileStr) {
-      fromMarkdown = markdownToHtml(fileStr);
-    });
+    fromMarkdown = markdownToHtml(mdAsString);
   }
 
 

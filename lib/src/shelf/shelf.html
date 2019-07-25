@@ -1,0 +1,31 @@
+<nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <img src="assets/images/bunny_logo_1.png" width="112" height="28">
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a *ngFor="let tab of shelf.tabs"
+               (click)="selectTab(tab)"
+               [class.is-active]="tab == chosenTab"
+               class="navbar-item">{{tab.name}}</a>
+        </div>
+    </div>
+</nav>
+
+<aside class="menu my-menu">
+
+    <div *ngFor="let section of chosenTab.sections">
+        <p  class="menu-label">{{section.label}}</p>
+        <ul class="menu-list">
+            <li *ngFor="let item of section.items">
+                <a (click)="selectItem(section, item)"
+                   [class.is-active]="item == chosenItem">{{item.name}}</a></li>
+        </ul>
+    </div>
+
+</aside>
+
+<tech-article [mdAsString]="articleStr"></tech-article>
