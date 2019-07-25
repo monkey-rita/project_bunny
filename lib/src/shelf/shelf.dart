@@ -7,7 +7,7 @@ import '../raw_data.dart';
 @Component(
   selector: 'my-shelf',
   templateUrl: 'shelf.html',
-  styleUrls: ['shelf.css'],
+  styleUrls: ['shelf.css', 'bulma.css'],
   directives: [ArticleComponent, NgFor]
 )
 class ShelfComponent {

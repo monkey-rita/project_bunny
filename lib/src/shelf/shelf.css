@@ -1,9 +1,14 @@
+:host {
+    display: flex;
+}
+
 .my-menu {
     width: 250px;
     margin: 45px 10px 20px 20px;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid darkgray;
+    height: auto;
 }
 
 .menu-label {
