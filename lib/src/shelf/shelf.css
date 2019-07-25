@@ -8,7 +8,7 @@
     padding: 15px;
     border-radius: 5px;
     border: 1px solid darkgray;
-    height: auto;
+    height: fit-content;
 }
 
 .menu-label {
